@@ -1,0 +1,32 @@
+# Example include/exclude filters for a basic Debian GNU/Linux system 
+# for when invoking as: rsync ... --filter '. THISFILE'
+
++ /boot
++ /boot/**
++ /etc
++ /etc/**
++ /home
+- /home/*/.adobe/Flash_Player
++ /home/*/.cabal/config
+- /home/*/.cabal/**
+- /home/*/.comix/menu_thumbnails
+- /home/*/.dvdcss
+- /home/*/.macromedia
+- /home/*/.thumbnails
+- /home/**/[Cc]ache
++ /home/**
++ /root
++ /root/.cabal/config
+- /root/.cabal/**
++ /root/**
++ /var
++ /var/lib
++ /var/lib/dpkg
++ /var/lib/dpkg/**
++ /var/log
++ /var/log/**
++ /var/mail
++ /var/mail/**
++ /var/spool/cron
++ /var/spool/cron/**
+- *
