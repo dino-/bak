@@ -11,6 +11,7 @@
 - /home/*/.cabal/**
 - /home/*/.comix/menu_thumbnails
 - /home/*/.dvdcss
+- /home/*/.gvfs
 - /home/*/.macromedia
 - /home/*/.thumbnails
 - /home/*/.xsession-errors
