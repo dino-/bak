@@ -13,6 +13,7 @@
 - /home/*/.dvdcss
 - /home/*/.macromedia
 - /home/*/.thumbnails
+- /home/*/.xsession-errors
 - /home/**/[Cc]ache
 + /home/**
 + /root
