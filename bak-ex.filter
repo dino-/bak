@@ -1,5 +1,5 @@
 # Example include/exclude filters for a basic Debian GNU/Linux system 
-# for when invoking as: rsync ... --filter '. THISFILE'
+# for when invoking as: rsync ... --filter '. THISFILE' with / for src
 
 + /boot
 + /boot/**
