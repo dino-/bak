@@ -9,6 +9,7 @@
 
 import Control.Monad ( liftM )
 import Data.List ( intercalate )
+import System.Exit ( exitWith )
 import System.IO ( BufferMode ( NoBuffering )
                  , hSetBuffering, stdout, stderr )
 import System.Locale ( defaultTimeLocale )
@@ -76,9 +77,11 @@ main = do
 
    logMsg command
 
-   runCommand command >>= waitForProcess
+   ec <- runCommand command >>= waitForProcess
 
    logMsg "stopped"
+
+   exitWith ec
 
 
 {- Installation:
