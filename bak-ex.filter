@@ -32,5 +32,6 @@
 #+ /var/lib/VirtualBox/***
 + /var/log/***
 + /var/mail/***
++ /var/spool
 + /var/spool/cron/***
 - *
