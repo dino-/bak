@@ -1,34 +1,36 @@
-# Example include/exclude filters for a basic Debian GNU/Linux system 
+# Example include/exclude filters
 # for when invoking as: rsync ... --filter '. THISFILE' with / for src
+# The commented-out entries below are distro- or application-specific
+# You may or may not need them
 
-+ /boot
-+ /boot/**
-+ /etc
-+ /etc/**
++ /boot/***
++ /etc/***
 + /home
 - /home/*/.adobe/Flash_Player
-+ /home/*/.cabal/config
-- /home/*/.cabal/**
+#+ /home/*/.cabal/config
+#- /home/*/.cabal/**
 - /home/*/.comix/menu_thumbnails
 - /home/*/.dvdcss
 - /home/*/.gvfs
+- /home/*/.local/share/Trash
 - /home/*/.macromedia
 - /home/*/.thumbnails
 - /home/*/.xsession-errors
 - /home/**/[Cc]ache
 + /home/**
 + /root
-+ /root/.cabal/config
-- /root/.cabal/**
+#+ /root/.cabal/config
+#- /root/.cabal/**
 + /root/**
 + /var
+#+ /var/cache
+#+ /var/cache/pacman/***
 + /var/lib
-+ /var/lib/dpkg
-+ /var/lib/dpkg/**
-+ /var/log
-+ /var/log/**
-+ /var/mail
-+ /var/mail/**
-+ /var/spool/cron
-+ /var/spool/cron/**
+#+ /var/lib/dpkg/***
+#+ /var/lib/pacman/***
+#+ /var/lib/mysql/***
+#+ /var/lib/VirtualBox/***
++ /var/log/***
++ /var/mail/***
++ /var/spool/cron/***
 - *

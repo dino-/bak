@@ -1,0 +1,28 @@
+Installation:
+
+- Place a copy of the script and filter file somewhere important like
+      /etc/bak/bak-system.sh
+      /etc/bak/bak-system.filter
+
+  Make sure the script is executable.
+
+- Modify the src and dest variables and possibly command switches to reflect your backup needs. Specify the proper path to the filter file if necessary.
+
+  DON'T FORGET to comment out the --dry-run switch assignment once you think
+  it's ready!
+
+- Put something like this in your root user's crontab:
+
+      30 02 * * * sh -c '/etc/bak/bak-system.sh > /var/log/bak-system.log' || echo "ERROR exit code $?"
+
+- Perhaps get logrotate involved to keep the log from getting out of
+  control. A file like /etc/logrotate.d/bak containing:
+
+      /var/log/bak-system.log {
+         rotate 7
+         daily
+         compress
+         delaycompress
+         missingok
+         notifempty
+      }
