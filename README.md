@@ -15,8 +15,8 @@ I do nightly backups with rsync. Over time a simple shell script wrapper plus rs
 
 Place a copy of the script and filter file somewhere important like:
 
->     /etc/bak/bak-system.sh
->     /etc/bak/bak-system.filter
+    /etc/bak/bak-system.sh
+    /etc/bak/bak-system.filter
 
 Make sure the script is executable.
 
@@ -28,25 +28,25 @@ It might be nice to name these files and things `bak-YOURMACHINENAME.sh` etc. As
 
 Put something like this in your root user's crontab:
 
->     30 02 * * * sh -c '/etc/bak/bak-system.sh > /var/log/bak-system.log' || echo "ERROR exit code $?"
+    30 02 * * * sh -c '/etc/bak/bak-system.sh > /var/log/bak-system.log' || echo "ERROR exit code $?"
 
 Perhaps get logrotate involved to keep the log from getting out of control. A file like `/etc/logrotate.d/bak` containing:
 
->     /var/log/bak-system.log {
->        rotate 7
->        daily
->        compress
->        delaycompress
->        missingok
->        notifempty
->     }
+    /var/log/bak-system.log {
+       rotate 7
+       daily
+       compress
+       delaycompress
+       missingok
+       notifempty
+    }
 
 
 ## Getting source
 
 Get the source with darcs:
 
->     $ darcs get http://ui3.info/darcs/bak
+    $ darcs get http://ui3.info/darcs/bak
 
 Or [browse the source](http://ui3.info/darcs/bak)
 
