@@ -46,9 +46,9 @@ Perhaps get logrotate involved to keep the log from getting out of control. A fi
 
 Get the source with darcs:
 
-    $ darcs get http://ui3.info/darcs/bak
+    $ darcs get http://hub.darcs.net/dino/bak
 
-Or [browse the source](http://ui3.info/darcs/bak)
+Or [browse the source](http://hub.darcs.net/dino/bak)
 
 
 ## Contact
