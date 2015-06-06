@@ -3,7 +3,7 @@
 
 ## Synopsis
 
-Script for automating nightly machine backups using rsync (bash)
+Script for automating nightly machine backups using rsync
 
 
 ## Description
