@@ -44,11 +44,11 @@ Perhaps get logrotate involved to keep the log from getting out of control. A fi
 
 ## Getting source
 
-Get the source with darcs:
+Get the source with git:
 
-    $ darcs get http://hub.darcs.net/dino/bak
+    $ git clone https://github.com/dino-/bak.git
 
-Or [browse the source](http://hub.darcs.net/dino/bak)
+Or [browse the source](https://github.com/dino-/scripts)
 
 
 ## Contact
