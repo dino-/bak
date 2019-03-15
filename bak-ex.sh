@@ -20,7 +20,7 @@ dest=user@domain:/var/local/backup/system
 pkgListCmd="pacman -Qqe | grep -Fvx \"\$(pacman -Qqm)\" > /var/lib/pacman/installed-packages"
 
 # for Debian
-#pkgListCmd="dpkg --get-selections > /var/lib/dpkg-sel-backup"
+# pkgListCmd="dpkg --get-selections > /var/lib/dpkg-sel-backup"
 
 
 # How long to wait for the backup to finish before failing
