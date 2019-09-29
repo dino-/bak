@@ -34,7 +34,11 @@ backupCmd="rsync --archive --verbose --delete --delete-excluded --filter '. /etc
 
 # A simple function for logging messages with a timestamp
 log () {
+   # Add the date/time to each log line
    echo "$(date +"%F %T")> $1"
+
+   # Just the log message, good for when running from a systemd timer, which adds the date/time.
+   # echo "$1"
 }
 
 
