@@ -3,35 +3,142 @@
 # The commented-out entries below are distro- or application-specific
 # You may or may not need them
 
+- /**/.cache
+- /**/.mypy_cache
+- /**/.node-gyp
+- /**/.npm
+- /**/.stack-work
+# .venv Conventional Python virtual environment dir
+- /**/.venv
 + /boot/***
 + /etc/***
 + /home
-- /home/*/.adobe/Flash_Player
-#+ /home/*/.cabal/config
-#- /home/*/.cabal/**
-- /home/*/.comix/menu_thumbnails
+- /home/*/.adobe
+- /home/*/.aptitude
++ /home/*/.bitcoin/wallet.dat
+- /home/*/.bitcoin/**
++ /home/*/.cabal/config
+- /home/*/.cabal/**
++ /home/*/.config
+# .config/*chrom* is for the google-chrome and chromium directories
++ /home/*/.config/*chrom*
++ /home/*/.config/*chrom*/Default
+- /home/*/.config/*chrom*/Default/Application Cache
+- /home/*/.config/*chrom*/Default/Local Storage
+- /home/*/.config/*chrom*/Default/Pepper Data
+- /home/*/.config/*chrom*/Default/Session Storage
+- /home/*/.config/*chrom*/Default/Service Worker
++ /home/*/.config/*chrom*/Default/***
+- /home/*/.config/*chrom*/**
+- /home/*/.config/systemd/user/*.target.wants/**
+- /home/*/.dbus
++ /home/*/.dogecoin/wallet.dat
+- /home/*/.dogecoin/**
+- /home/*/.dropbox
+- /home/*/.dropbox-dist
 - /home/*/.dvdcss
+- /home/*/.esd_auth
++ /home/*/.feathercoin/wallet.dat
+- /home/*/.feathercoin/**
+- /home/*/.fontconfig
+- /home/*/.gconfd
+- /home/*/.ghc
+- /home/*/.gksu.lock
+# .gradle is for Android Java development
++ /home/*/.gradle/gradle.properties
+- /home/*/.gradle/**
 - /home/*/.gvfs
+- /home/*/.ICEauthority
+- /home/*/.ivy2
+- /home/*/.java
+- /home/*/.kde4/share/apps/okular/docdata
+- /home/*/.kde4/share/apps/RecentDocuments
++ /home/*/.litecoin/wallet.dat
+- /home/*/.litecoin/**
+- /home/*/.local/share/desktop
+# Games installed through Lutris are here
+- /home/*/.local/share/Games
+- /home/*/.local/share/gvfs-metadata
+- /home/*/.local/share/icons
+- /home/*/.local/share/Steam
 - /home/*/.local/share/Trash
+# .local/share/virtualenvs is Python things
+- /home/*/.local/share/virtualenvs
+# .m2 Maven cache
+- /home/*/.m2
 - /home/*/.macromedia
++ /home/*/.namecoin/wallet.dat
+- /home/*/.namecoin/**
++ /home/*/.novacoin/wallet.dat
+- /home/*/.novacoin/**
+# This .oracle_jre_usage dir showed up with Java 8, I think it's a bug
+- /home/*/.oracle_jre_usage
++ /home/*/.ppcoin/wallet.dat
+- /home/*/.ppcoin/**
++ /home/*/.primecoin/wallet.dat
+- /home/*/.primecoin/**
+# .pub-cache is for Dart (dartlang)
+- /home/*/.pub-cache
+- /home/*/.pulse
+- /home/*/.pulse-cookie
+- /home/*/.recently-used
+- /home/*/.recently-used.xbel
+- /home/*/.rnd
+# .sbt Scala Simple Build Tool
+- /home/*/.sbt
+# Haskell stack tool
++ /home/*/.stack/config.yaml
++ /home/*/.stack/templates/***
+- /home/*/.stack/**
+- /home/*/.secondlife/cache_sg1
++ /home/*/.terracoin/wallet.dat
+- /home/*/.terracoin/**
 - /home/*/.thumbnails
+- /home/*/.Trash
++ /home/*/.vertcoin/wallet.dat
+- /home/*/.vertcoin/**
+- /home/*/.vifm/Trash
+- /home/*/.Xauthority
 - /home/*/.xsession-errors
-- /home/**/[Cc]ache
+- /home/*/Downloads
+- /home/**/bower_components
+# cabal-dev was older Haskell cabal-dev sandboxing, prior to cabal-install sandboxes
+- /home/**/cabal-dev
+# .cabal-sandbox is the default dir when you use sandboxes, more Haskell stuff
+- /home/**/.cabal-sandbox
+# _cache directories are present in hakyll weblog directories
+- /home/**/_cache
+- /home/**/[Cc]ache*
+- /home/**/dist
+# Artifacts that exist during an mbsync execution, they often disappear quickly and cause errors
+- /home/**/.mbsyncstate.journal
+- /home/**/.mbsyncstate.lock
+- /home/**/.mbsyncstate.new
+- /home/**/node_modules
 + /home/**
 + /root
-#+ /root/.cabal/config
-#- /root/.cabal/**
++ /root/.cabal/config
+- /root/.cabal/**
 + /root/**
 + /var
-#+ /var/cache
-#+ /var/cache/pacman/***
 + /var/lib
-#+ /var/lib/dpkg/***
-#+ /var/lib/pacman/***
-#+ /var/lib/mysql/***
-#+ /var/lib/VirtualBox/***
+# dpkg on Debian systems only
++ /var/lib/dpkg-sel-backup
++ /var/lib/mysql/***
+# pacman on Arch Linux systems only
++ /var/lib/pacman
++ /var/lib/pacman/installed-packages
+# + /var/local
+# + /var/local/archive/***
+# + /var/local/dcp/***
+# + /var/local/dosbox
+# + /var/local/dosbox/bardtale/***
+# + /var/local/wine
+# + /var/local/wine/drive_c
+# + /var/local/wine/drive_c/Program Files
 + /var/log/***
 + /var/mail/***
 + /var/spool
 + /var/spool/cron/***
+# + /var/spool/mail/***
 - *
