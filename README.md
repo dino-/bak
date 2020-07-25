@@ -51,6 +51,35 @@ Get the source with git:
 Or [browse the source](https://github.com/dino-/scripts)
 
 
+## 2020-07-07 development notes
+
+Add in files and documentation to invoke these backup scripts with systemd
+timers and services.
+
+Tentative file list:
+
+    /etc/bak/   # Can these be made more generic? Some kind of conf.
+      bak-system.sh
+      bak-system.filter
+    /etc/systemd/system/
+      bak-hostname.timer
+      bak@.service
+      notify@.service
+    /usr/local/bin/
+      bak-log.sh  # Currently in ~/bin/, uses `rsync-errors.sh`
+      notify.sh
+      rsync-errors.sh  # Currently in the scripts project
+
+This also requires configuration of a sendmail-like which is out of the scope
+of this project. Mention `msmtp` and `msmtp-mta`?
+
+Requires `rsync` to be installed on the system.
+
+Also, be mindful of the timeout part in the sh script.
+
+Make installers for this for both Arch Linux and Debian-based.
+
+
 ## Contact
 
-Dino Morelli <[dino@ui3.info](mailto:dino@ui3.info)>
+Dino Morelli <mailto:dino@ui3.info>

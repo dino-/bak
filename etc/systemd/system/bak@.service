@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup service for machine %i
+OnFailure=notify@%n.service
+
+Requisite=network.target
+After=network.target
+
+[Service]
+ExecStart=/etc/bak/bak-%i.sh
+
+Type=oneshot

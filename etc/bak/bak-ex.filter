@@ -67,6 +67,10 @@
 # .m2 Maven cache
 - /home/*/.m2
 - /home/*/.macromedia
+# + /home/*/.minecraft/saves/***
+# - /home/*/.minecraft/**
+# 2019-12-22 Added because of some vanished file errors. Probably don't need to back up Mozilla (Firefox) local storage at all.
+- /home/*/.mozilla/firefox/*/storage
 + /home/*/.namecoin/wallet.dat
 - /home/*/.namecoin/**
 + /home/*/.novacoin/wallet.dat
@@ -86,11 +90,15 @@
 - /home/*/.rnd
 # .sbt Scala Simple Build Tool
 - /home/*/.sbt
+# - /home/*/.secondlife/cache_sg1
 # Haskell stack tool
 + /home/*/.stack/config.yaml
 + /home/*/.stack/templates/***
 - /home/*/.stack/**
-- /home/*/.secondlife/cache_sg1
+# Steam files get recreated on first login
+# - /home/*/.steam*
+# - /home/*/steam.desktop
+# - /home/*/.local/share/Steam
 + /home/*/.terracoin/wallet.dat
 - /home/*/.terracoin/**
 - /home/*/.thumbnails
@@ -106,6 +114,9 @@
 - /home/**/cabal-dev
 # .cabal-sandbox is the default dir when you use sandboxes, more Haskell stuff
 - /home/**/.cabal-sandbox
+# 2020-07-25 May be obsolete
+# - /home/**/cabal-sandbox
+# - /home/**/cabal.sandbox.config
 # _cache directories are present in hakyll weblog directories
 - /home/**/_cache
 - /home/**/[Cc]ache*
@@ -132,7 +143,7 @@
 # + /var/local/archive/***
 # + /var/local/dcp/***
 # + /var/local/dosbox
-# + /var/local/dosbox/bardtale/***
+# + /var/local/dosbox/SOMEGAME/***
 # + /var/local/wine
 # + /var/local/wine/drive_c
 # + /var/local/wine/drive_c/Program Files

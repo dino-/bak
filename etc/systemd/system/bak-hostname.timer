@@ -1,0 +1,14 @@
+[Unit]
+Description=Timer for backing up machine %H
+
+[Timer]
+; For production
+OnCalendar=*-*-* 03:00:00
+; For testing
+; OnUnitActiveSec=1m
+; AccuracySec=500ms
+
+Unit=bak@%H.service
+
+[Install]
+WantedBy=timers.target
