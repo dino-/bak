@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Normally this is a whole-machine backup but feel free to use whatever you need here
+backupName="$(hostname)"
+
 # Make sure you comment this out to actually perform backups
 dryRun=--dry-run
 
@@ -9,7 +12,7 @@ dryRun=--dry-run
 # Pay attention to the trailing slash on src. Trailing slash means DO NOT
 # create the src directory on dest. Usually you want this.
 src=/
-dest=user@domain:/var/local/backup/system
+dest="user@domain:/var/local/backup/${backupName}"
 
 
 # It's handy to back up the list of installed packages on the system. These
@@ -29,16 +32,16 @@ timeoutDuration=2h
 
 
 # Assembling the command to perform the backup and assigning it to a variable
-backupCmd="rsync --archive --verbose --delete --delete-excluded --filter '. /etc/bak/bak-system.filter' $dryRun $src $dest 2>&1"
+backupCmd="rsync --archive --verbose --delete --delete-excluded --filter '. /etc/bak/bak-${backupName}.filter' $dryRun $src $dest 2>&1"
 
 
 # A simple function for logging messages with a timestamp
 log () {
    # Add the date/time to each log line
-   echo "$(date +"%F %T")> $1"
+   # echo "$(date +"%F %T")> $1"
 
    # Just the log message, good for when running from a systemd timer, which adds the date/time.
-   # echo "$1"
+   echo "$1"
 }
 
 
