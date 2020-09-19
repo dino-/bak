@@ -6,6 +6,6 @@ Requisite=network.target
 After=network.target
 
 [Service]
-ExecStart=/etc/bak/bak-%i.sh
-
 Type=oneshot
+ExecStart=/etc/bak/bak-%i.sh
+LogRateLimitBurst=15000
