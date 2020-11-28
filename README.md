@@ -8,29 +8,36 @@ Script for automating nightly machine backups using rsync (bash)
 
 ## Description
 
-I do nightly backups with rsync. Over time a simple shell script wrapper plus rsync filter file has emerged from this effort. This project exists to share that work. I hope it's useful.
+I do nightly backups with rsync. Over time a simple shell script wrapper plus
+rsync filter file has emerged from this effort. This project exists to share
+that work. I hope it's useful.
 
 
 ## Installing
 
-Place a copy of the script and filter file somewhere important like:
+### With systemd
 
-    /etc/bak/bak-system.sh
-    /etc/bak/bak-system.filter
+Install files
 
-Make sure the script is executable.
+install -Dm0644 usr/lib/systemd/system/bak-hostname.timer /usr/lib/systemd/system/bak-hostname.timer
+install -Dm0644 usr/lib/systemd/system/bak@.service /usr/lib/systemd/system/bak@.service
+install -Dm0754 etc/bak/bak-system.sh /etc/bak/bak-$(hostname).sh
+install -Dm0644 etc/bak/bak-system.filter /etc/bak/bak-$(hostname).filter
 
-In the script, modify the `src` and `dest` variables and possibly command switches to reflect your backup needs. Specify the proper path to the filter file if necessary.
+- Set the run time in bak-hostname.timer
+- Set up optional failure messaging in bak@.service
 
-DON'T FORGET to comment out the `--dry-run` switch assignment once you think it's ready!
+### Without systemd
 
-It might be nice to name these files and things `bak-YOURMACHINENAME.sh` etc. As well as the log file if you're logging.
+If you're not on a system with systemd, these techniques can be used to start
+this service and manage the logs.
 
 Put something like this in your root user's crontab:
 
     30 02 * * * sh -c '/etc/bak/bak-system.sh > /var/log/bak-system.log' || echo "ERROR exit code $?"
 
-Perhaps get logrotate involved to keep the log from getting out of control. A file like `/etc/logrotate.d/bak` containing:
+Perhaps get logrotate involved to keep the log from getting out of control. A
+file like `/etc/logrotate.d/bak` containing:
 
     /var/log/bak-system.log {
        rotate 7
@@ -40,6 +47,19 @@ Perhaps get logrotate involved to keep the log from getting out of control. A fi
        missingok
        notifempty
     }
+
+
+## Post-installation
+
+In the script, modify the `src` and `dest` variables and possibly command
+switches to reflect your backup needs. Specify the proper path to the filter
+file if necessary.
+
+DON'T FORGET to comment out the `--dry-run` switch assignment once you think
+it's ready!
+
+It might be nice to name these files and things `bak-HOSTNAME.sh` etc. As well
+as the log file if you're logging without systemd.
 
 
 ## Getting source
@@ -53,8 +73,8 @@ Or [browse the source](https://github.com/dino-/scripts)
 
 ## 2020-07-07 development notes
 
-Add in files and documentation to invoke these backup scripts with systemd
-timers and services.
+Added files and documentation to invoke these backup scripts with systemd
+timers and services. This is in-progress still.
 
 Tentative file list:
 
@@ -67,9 +87,6 @@ Tentative file list:
     /usr/local/bin/
       bak-log.sh  # Currently in ~/bin/, uses `rsync-errors.sh`
       rsync-errors.sh  # Currently in the scripts project
-
-This also requires configuration of a sendmail-like which is out of the scope
-of this project. Mention `msmtp` and `msmtp-mta`?
 
 Requires `rsync` to be installed on the system.
 
