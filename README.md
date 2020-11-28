@@ -19,10 +19,10 @@ that work. I hope it's useful.
 
 Install files
 
-install -Dm0644 usr/lib/systemd/system/bak-hostname.timer /usr/lib/systemd/system/bak-hostname.timer
-install -Dm0644 usr/lib/systemd/system/bak@.service /usr/lib/systemd/system/bak@.service
-install -Dm0754 etc/bak/bak-system.sh /etc/bak/bak-$(hostname).sh
-install -Dm0644 etc/bak/bak-system.filter /etc/bak/bak-$(hostname).filter
+    # install -Dm0644 etc/systemd/system/bak-hostname.timer /etc/systemd/system/bak-hostname.timer
+    # install -Dm0644 etc/systemd/system/bak@.service /etc/systemd/system/bak@.service
+    # install -Dm0754 etc/bak/bak-system.sh /etc/bak/bak-$(hostname).sh
+    # install -Dm0644 etc/bak/bak-system.filter /etc/bak/bak-$(hostname).filter
 
 - Set the run time in bak-hostname.timer
 - Set up optional failure messaging in bak@.service
