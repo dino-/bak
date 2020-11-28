@@ -24,8 +24,8 @@ Install files
     # install -Dm0754 etc/bak/bak-system.sh /etc/bak/bak-$(hostname).sh
     # install -Dm0644 etc/bak/bak-system.filter /etc/bak/bak-$(hostname).filter
 
-- Set the run time in bak-hostname.timer
-- Set up optional failure messaging in bak@.service
+- Set the run time in `bak-hostname.timer`
+- Set up optional failure messaging in `bak@.service`
 
 ### Without systemd
 
