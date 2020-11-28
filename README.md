@@ -64,10 +64,8 @@ Tentative file list:
     /etc/systemd/system/
       bak-hostname.timer
       bak@.service
-      notify@.service
     /usr/local/bin/
       bak-log.sh  # Currently in ~/bin/, uses `rsync-errors.sh`
-      notify.sh
       rsync-errors.sh  # Currently in the scripts project
 
 This also requires configuration of a sendmail-like which is out of the scope

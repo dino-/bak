@@ -1,6 +1,7 @@
 [Unit]
 Description=Backup service for machine %i
-OnFailure=notify@%n.service
+; Optionally use systemd-failmsg to generate failure emails
+; OnFailure=failmsg@%n.service
 
 Requisite=network.target
 After=network.target
