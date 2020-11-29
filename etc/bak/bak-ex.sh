@@ -40,7 +40,8 @@ log () {
    # Add the date/time to each log line
    # echo "$(date +"%F %T")> $1"
 
-   # Just the log message, good for when running from a systemd timer, which adds the date/time.
+   # Just the log message. Good for when running from a systemd service, which
+   # adds the date/time to the journal log lines.
    echo "$1"
 }
 
