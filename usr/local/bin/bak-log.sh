@@ -1,7 +1,10 @@
 #! /bin/bash
 
-# FIXME Parameterize this to take an optional HOST and use hostname if it's not supplied
-bakJournalCmd="journalctl -u bak@$(hostname) --since today"
+# Default to the hostname of this machine. Sometimes there's an additional backup, example:
+#   $ bak-log.sh bak@ext.service
+targetUnit=${1:-bak@$(hostname).service}
+
+bakJournalCmd="journalctl --unit ${targetUnit} --since today"
 
 {
   $bakJournalCmd | rsync-errors.sh
