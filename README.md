@@ -88,11 +88,36 @@ Tentative file list:
       bak-log.sh  # Currently in ~/bin/, uses `rsync-errors.sh`
       rsync-errors.sh  # Currently in the scripts project
 
+Eventual installation shape?
+
+    /etc/bak/
+      bak-HOSTNAME.filter   # Used by bak-HOSTNAME.sh
+    /usr/bin/
+      bak-log.sh
+      rsync-errors.sh
+    /usr/lib/systemd/system/
+      bak-hostname.timer
+      bak@.service
+    /usr/share/bak/
+      bin/bak-ex.sh         # Copied to /usr/local/bin/bak-HOSTNAME.sh
+      bak-ex.filter         # Copied to /etc/bak/bak-HOSTNAME.filter
+
+
 Requires `rsync` to be installed on the system.
 
 Also, be mindful of the timeout part in the sh script.
 
 Make installers for this for both Arch Linux and Debian-based.
+
+`rsync-errors.sh`:
+
+- Why no args case?
+- Replace `function` with `f () {}` style
+- Use `warn` and `die` instead of `echo` and `exit`
+
+Figure out development directory shape (similar to installed shape or not? Varies according to distro because of systemd conventions). And make an installer to deploy the files to a dir structure.
+
+Real args and usage for `bak-log.sh`
 
 
 ## Contact
