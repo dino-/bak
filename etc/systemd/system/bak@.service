@@ -1,5 +1,5 @@
 [Unit]
-Description=Backup service for machine %i
+Description=Backup service for %i
 ; Optionally use systemd-failmsg to generate failure emails
 ; OnFailure=failmsg@%n.service
 

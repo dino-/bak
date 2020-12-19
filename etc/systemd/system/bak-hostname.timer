@@ -1,5 +1,8 @@
+; This is configured to use %H, the hostname of this machine. This will be sent
+; to the Unit. For other kinds of backups, any string can be used here instead
+; of %H
 [Unit]
-Description=Timer for backing up machine %H
+Description=Timer for backup of %H
 
 [Timer]
 ; For production
