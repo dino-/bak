@@ -5,8 +5,11 @@
 Description=Timer for backup of %H
 
 [Timer]
-; For production
+; For production, this makes the backup occur between 3AM and 5AM
 OnCalendar=*-*-* 03:00:00
+RandomizedDelaySec=6600
+Persistent=true
+
 ; For testing
 ; OnUnitActiveSec=1m
 ; AccuracySec=500ms
