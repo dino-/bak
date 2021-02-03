@@ -32,7 +32,7 @@ timeoutDuration=2h
 
 
 # Assembling the command to perform the backup and assigning it to a variable
-backupCmd="rsync --archive --verbose --delete --delete-excluded --filter '. /etc/bak/bak-${backupName}.filter' $dryRun $src $dest 2>&1"
+backupCmd="rsync --archive --hard-links --verbose --delete --delete-excluded --filter '. /etc/bak/bak-${backupName}.filter' $dryRun $src $dest 2>&1"
 
 
 # A simple function for logging messages with a timestamp
