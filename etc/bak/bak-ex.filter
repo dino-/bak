@@ -3,6 +3,16 @@
 # The commented-out entries below are distro- or application-specific
 # You may or may not need them
 
+
+# Steam-related
+
+- /home/*/.local/share/Steam
+# These Steam files get recreated on first login
+- /home/*/.steam*
+- /home/*/steam.desktop
+
+# everything else
+
 - /**/.cache
 - /**/.mypy_cache
 - /**/.node-gyp
@@ -60,7 +70,6 @@
 - /home/*/.local/share/Games
 - /home/*/.local/share/gvfs-metadata
 - /home/*/.local/share/icons
-- /home/*/.local/share/Steam
 - /home/*/.local/share/Trash
 # .local/share/virtualenvs is Python things
 - /home/*/.local/share/virtualenvs
@@ -95,19 +104,17 @@
 + /home/*/.stack/config.yaml
 + /home/*/.stack/templates/***
 - /home/*/.stack/**
-# Steam files get recreated on first login
-# - /home/*/.steam*
-# - /home/*/steam.desktop
-# - /home/*/.local/share/Steam
 + /home/*/.terracoin/wallet.dat
 - /home/*/.terracoin/**
 - /home/*/.thumbnails
 - /home/*/.Trash
+- /home/*/Unity
 + /home/*/.vertcoin/wallet.dat
 - /home/*/.vertcoin/**
 - /home/*/.vifm/Trash
 - /home/*/.Xauthority
 - /home/*/.xsession-errors
+- /home/*/.zoom/data
 - /home/*/Downloads
 - /home/**/bower_components
 # cabal-dev was older Haskell cabal-dev sandboxing, prior to cabal-install sandboxes
