@@ -27,6 +27,7 @@
 - /home/*/.aptitude
 + /home/*/.bitcoin/wallet.dat
 - /home/*/.bitcoin/**
+- /home/**/bower_components
 + /home/*/.cabal/config
 - /home/*/.cabal/**
 + /home/*/.config
@@ -34,6 +35,7 @@
 + /home/*/.config/*chrom*
 + /home/*/.config/*chrom*/Default
 - /home/*/.config/*chrom*/Default/Application Cache
+- /home/*/.config/*chrom*/Default/IndexedDB
 - /home/*/.config/*chrom*/Default/Local Storage
 - /home/*/.config/*chrom*/Default/Pepper Data
 - /home/*/.config/*chrom*/Default/Session Storage
