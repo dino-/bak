@@ -3,6 +3,10 @@
 # The commented-out entries below are distro- or application-specific
 # You may or may not need them
 
+# NVidia video caches
+- /home/GPUCache
+- /home/*/.nv/ComputeCache
+- /home/*/.nv/GLCache
 
 # Steam-related
 
