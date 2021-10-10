@@ -73,6 +73,17 @@ Or [browse the source](https://github.com/dino-/scripts)
 
 ## 2020-07-07 development notes
 
+What are the issues?
+
+- Each bak-HOSTNAME.sh script is a one-off with hand-made adjustments for the specific machine (or whatever backup it is). I'd like to see it use a config file so the static code can be left alone.
+- Parsing and validating a config file with bash sounds like a bad idea
+- In fact, using a real industrial language (like Haskell) would let us handle things like the `timeout` procedure with threads, fwiw
+- Utility binaries like this shouldn't be located in `/etc/`
+- In fact, this software should have real installation and packaging for at least Debian and Arch
+- There may be too many programs now what with the other two (bak-log.sh, rsync-errors.sh). Can/should this all be rolled up into one tool to perform backups and report on the results from logging?
+- Instead of hand picking the method of writing a currently-installed package list for the distro, code should determine the distro and perform the appropriate command
+- The package list should explain that it was made by this software, especially because it sits in a directory below `/var/lib`, which isn't clearly owned by anyone other than root.
+
 Added files and documentation to invoke these backup scripts with systemd
 timers and services. This is in-progress still.
 
@@ -119,6 +130,12 @@ Figure out development directory shape (similar to installed shape or not? Varie
 
 Real args and usage for `bak-log.sh`
 
+These settings will try to start between 03:00 and 04:50 and seem reasonable for about a half-dozen backups that take much less than 10 minutes each to perform.
+
+    [Timer]
+    OnCalendar=*-*-* 03:00:00
+    RandomizedDelaySec=6600
+    Persistent=true
 
 ## Contact
 
