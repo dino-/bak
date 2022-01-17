@@ -40,6 +40,7 @@
 + /home/*/.config/*chrom*/Default
 - /home/*/.config/*chrom*/Default/Application Cache
 - /home/*/.config/*chrom*/Default/IndexedDB
+- /home/*/.config/*chrom*/Default/Local Extension Settings
 - /home/*/.config/*chrom*/Default/Local Storage
 - /home/*/.config/*chrom*/Default/Pepper Data
 - /home/*/.config/*chrom*/Default/Session Storage
