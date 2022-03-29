@@ -42,6 +42,8 @@
 - /home/*/.config/*chrom*/Default/IndexedDB
 - /home/*/.config/*chrom*/Default/Local Extension Settings
 - /home/*/.config/*chrom*/Default/Local Storage
+# .org.chromium.Chromium.* may have something to do with Electron apps
+- /home/*/.config/*chrom*/Default/.org.chromium.Chromium.*
 - /home/*/.config/*chrom*/Default/Pepper Data
 - /home/*/.config/*chrom*/Default/Session Storage
 - /home/*/.config/*chrom*/Default/Service Worker
