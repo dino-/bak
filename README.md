@@ -19,17 +19,12 @@ that work. I hope it's useful.
 
 Install files
 
-    # install -Dm0644 etc/systemd/system/bak-hostname.timer /etc/systemd/system/bak-hostname.timer
-    # install -Dm0644 etc/systemd/system/bak@.service /etc/systemd/system/bak@.service
-    # install -Dm0754 etc/bak/bak-.sh /etc/bak/bak-$(hostname).sh
-    # install -Dm0644 etc/bak/bak-ex.filter /etc/bak/bak-$(hostname).filter
-
     # install -Dm0644 bak-hostname.timer /etc/systemd/system/bak-hostname.timer
     # install -Dm0644 bak@.service /etc/systemd/system/bak@.service
-    # install -Dm0754 bak-ex.sh /etc/bak/bak-$(hostname).sh
+    # install -Dm0755 bak-ex.sh /etc/bak/bak-$(hostname).sh
     # install -Dm0644 bak-ex.filter /etc/bak/bak-$(hostname).filter
-    # install -Dm0754 bak-log.sh /usr/local/bin/bak-log.sh
-    # install -Dm0754 rsync-errors.sh /usr/local/bin/rsync-errors.sh
+    # install -Dm0755 bak-log.sh /usr/local/bin/bak-log.sh
+    # install -Dm0755 rsync-errors.sh /usr/local/bin/rsync-errors.sh
 
 - Set the run time in `bak-hostname.timer`
 - Set up optional failure messaging in `bak@.service`
