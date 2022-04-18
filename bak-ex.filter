@@ -137,6 +137,7 @@
 - /home/**/_cache
 - /home/**/[Cc]ache*
 - /home/**/dist
+- /home/**/dist-newstyle
 # Artifacts that exist during an mbsync execution, they often disappear quickly and cause errors
 - /home/**/.mbsyncstate.journal
 - /home/**/.mbsyncstate.lock
