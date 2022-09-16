@@ -126,13 +126,8 @@
 - /home/*/.zoom/data
 - /home/*/Downloads
 - /home/**/bower_components
-# cabal-dev was older Haskell cabal-dev sandboxing, prior to cabal-install sandboxes
-- /home/**/cabal-dev
 # .cabal-sandbox is the default dir when you use sandboxes, more Haskell stuff
 - /home/**/.cabal-sandbox
-# 2020-07-25 May be obsolete
-# - /home/**/cabal-sandbox
-# - /home/**/cabal.sandbox.config
 # _cache directories are present in hakyll weblog directories
 - /home/**/_cache
 - /home/**/[Cc]ache*
