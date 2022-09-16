@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Normally this is a whole-machine backup but feel free to use whatever you need here
-backupName="$(hostname)"
+backupName="$HOSTNAME"
 
 # Make sure you comment this out to actually perform backups
 dryRun=--dry-run

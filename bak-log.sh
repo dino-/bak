@@ -2,7 +2,7 @@
 
 # Default to the hostname of this machine. Sometimes there's an additional backup, example:
 #   $ bak-log.sh bak@ext.service
-targetUnit=${1:-bak@$(hostname).service}
+targetUnit=${1:-bak@$HOSTNAME.service}
 
 bakJournalCmd="journalctl --unit ${targetUnit} --since today"
 
