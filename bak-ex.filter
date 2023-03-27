@@ -3,6 +3,13 @@
 # The commented-out entries below are distro- or application-specific
 # You may or may not need them
 
+
+# Android development and tooling
+
+- /home/*/.android/avd
+- /home/*/.android/cache
+- /home/*/.android/default.sql
+- /home/*/.android/metrics/spool
 # NVidia video caches
 - /home/GPUCache
 - /home/*/.nv/ComputeCache
@@ -10,7 +17,18 @@
 
 # Steam-related
 
-- /home/*/.local/share/Steam
+# Some games don't store their stuff in Steam's cloud storage! Also,
+# screenshots never get saved up there! So let's back up the user's data.
+# Arch Linux
++ /home/*/.local/share/Steam
++ /home/*/.local/share/Steam/userdata/***
+- /home/*/.local/share/Steam/**
+# Ubuntu
+# + /home/*/.steam
+# + /home/*/.steam/debian-installation
+# + /home/*/.steam/debian-installation/userdata/***
+# - /home/*/.steam/**
+
 # These Steam files get recreated on first login
 - /home/*/.steam*
 - /home/*/steam.desktop
