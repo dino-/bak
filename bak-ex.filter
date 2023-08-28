@@ -144,8 +144,6 @@
 - /home/*/.zoom/data
 - /home/*/Downloads
 - /home/**/bower_components
-# .cabal-sandbox is the default dir when you use sandboxes, more Haskell stuff
-- /home/**/.cabal-sandbox
 # _cache directories are present in hakyll weblog directories
 - /home/**/_cache
 - /home/**/[Cc]ache*
