@@ -1,7 +1,9 @@
-#! /bin/bash
+#! /usr/bin/env bash
+
+set -e
 
 # Normally this is a whole-machine backup but feel free to use whatever you need here
-backupName="$HOSTNAME"
+backupName="${HOSTNAME:?Variable not set, this script needs something for backupName}"
 
 # Make sure you comment this out to actually perform backups
 dryRun=--dry-run
