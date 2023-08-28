@@ -39,6 +39,7 @@
 - /**/.mypy_cache
 - /**/.node-gyp
 - /**/.npm
+- /**/.nvm
 - /**/.stack-work
 # .venv Conventional Python virtual environment dir
 - /**/.venv
@@ -81,6 +82,7 @@
 - /home/*/.gconfd
 - /home/*/.ghc
 - /home/*/.gksu.lock
+- /home/*/go
 # .gradle is for Android Java development
 + /home/*/.gradle/gradle.properties
 - /home/*/.gradle/**
@@ -131,6 +133,8 @@
 + /home/*/.stack/config.yaml
 + /home/*/.stack/templates/***
 - /home/*/.stack/**
+# Maven (sbt) build artifacts
+# - /home/**/target
 + /home/*/.terracoin/wallet.dat
 - /home/*/.terracoin/**
 - /home/*/.thumbnails
