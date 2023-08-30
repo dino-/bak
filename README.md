@@ -19,12 +19,16 @@ that work. I hope it's useful.
 
 Install files
 
-    # install -Dm0644 bak-hostname.timer /etc/systemd/system/bak-hostname.timer
-    # install -Dm0644 bak@.service /etc/systemd/system/bak@.service
-    # install -Dm0755 bak-ex.sh /etc/bak/bak-$(hostname).sh
-    # install -Dm0644 bak-ex.filter /etc/bak/bak-$(hostname).filter
-    # install -Dm0755 bak-log.sh /usr/local/bin/bak-log.sh
-    # install -Dm0755 rsync-errors.sh /usr/local/bin/rsync-errors.sh
+You can install files with the `install.sh` script or the commands below but I
+recommend against it. Try using a package for your distro. We provide packaging
+for both Debian-based (.deb file) and Arch Linux (.pkg.tar.zst)
+
+    # install -Dm0644 bak-hostname.timer "/etc/systemd/system/bak-hostname.timer"
+    # install -Dm0644 bak@.service "/etc/systemd/system/bak@.service"
+    # install -Dm0754 bak-ex.sh "/etc/bak/bak-ex.sh"
+    # install -Dm0644 bak-ex.filter "/etc/bak/bak-ex.filter"
+    # install -Dm0754 bak-log.sh "/usr/local/bin/bak-log.sh"
+    # install -Dm0754 rsync-errors.sh "/usr/local/bin/rsync-errors.sh"
 
 - Set the run time in `bak-hostname.timer`
 - Set up optional failure messaging in `bak@.service`
@@ -33,6 +37,8 @@ Install files
 
 If you're not on a system with systemd, these techniques can be used to start
 this service and manage the logs.
+
+And you won't want to install the systemd unit files above into /etc/systemd
 
 Put something like this in your root user's crontab:
 
@@ -127,8 +133,6 @@ Make installers for this for both Arch Linux and Debian-based.
 - Why no args case?
 - Replace `function` with `f () {}` style
 - Use `warn` and `die` instead of `echo` and `exit`
-
-Figure out development directory shape (similar to installed shape or not? Varies according to distro because of systemd conventions). And make an installer to deploy the files to a dir structure.
 
 Real args and usage for `bak-log.sh`
 
